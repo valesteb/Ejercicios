@@ -3,7 +3,11 @@
 /* Empezamos creando la lista de materias definiendo cada una como un array que incluye: asistencias([0]), trabajos entregados([1]), promedio de calificación([2])
  y el nombre de la materia para imprimir en consola ([3])  */
 
- let materias = {
+
+/* We begin by creating the list of subjects defining each one as an array that includes: attendances([0]), assignments submitted([1]), grade average([2])
+ and the name of the matter to print in the console ([3]) */
+  
+ let subjects = {
     logica: [90, 7, 7, "Lógica"],
     matematica: [84, 8, 2, "Matemática"],
     desarrollo: [98, 9, 4, "Desarrollo "],
@@ -13,46 +17,48 @@
 
 /* Definimos la función */
 
-const Aprobacion = ()=>{
+const Aproved = ()=>{
 
-    for (materia in materias){
+    for (materia in subjects){
 
-        let asistencias = materias[materia][0];
-        let trabajos = materias[materia][1];
-        let promedio = materias[materia][2]
+        let assistance = subjects[materia][0];
+        let tasks = subjects[materia][1];
+        let average = subjects[materia][2]
 
-        console.log(materias[materia][3]);        
+        console.log(subjects[materia][3]);        
 
-        if (asistencias >= 90) {
+        if (assistance >= 90) {
 
-            console.log("%c  Aprobado", "color:green");
+            console.log("%c  Aproved", "color:green");
 
         } else {
            
-            console.log("%c  Falta de asistencias", "color:red");
+            console.log("%c  Missing assistance", "color:red");
         }
 
-        if (trabajos >= 3) {
+        if (tasks >= 6) {
         
-            console.log("%c  Trabajos en orden", "color:green");
+            console.log("%c  Tasks in order", "color:green");
 
         } else {
         
-            console.log("%c  Faltan trabajos", "color:red");            
+            console.log("%c  Missing tasks", "color:red");            
         }
 
-        if (promedio >= 3) {
+        if (average >= 3) {
         
-            console.log("%c  Promedio alcanzado", "color:green");
+            console.log("%c  Average met", "color:green");
 
         } else {
 
-            console.log("%c Promedio no alcanzado", "color:red");
+            console.log("%c Average not met", "color:red");
 
         }
 
         }
 
     }
+/* When executed, the program should open the console and show the list of sujects that are being evaluated 
+with the preentered values (that will need to be captured along the studies duration and can be integrated to or from this code), and the result in colors according to the criteria for passing */
 
-asistencias()
+Aproved()
